@@ -1,0 +1,177 @@
+@font-face {
+  font-family: "lakeshore";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/LAKESHOR-webfont.eot");
+  src: url("fonts/LAKESHOR-webfont.eot?#iefix") format("embedded-opentype"),
+    url("fonts/LAKESHOR-webfont.woff") format("woff"),
+    url("fonts/LAKESHOR-webfont.ttf") format("truetype"),
+    url("fonts/LAKESHOR-webfont.svg#lakeshore") format("svg");
+}
+
+@font-face {
+  font-family: "airstreamregular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/Airstream-webfont.eot");
+  src: url("fonts/Airstream-webfont.eot?#iefix") format("embedded-opentype"),
+    url("fonts/Airstream-webfont.woff") format("woff"),
+    url("fonts/Airstream-webfont.ttf") format("truetype"),
+    url("fonts/Airstream-webfont.svg#airstreamregular") format("svg");
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: rgb(149, 194, 215);
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-header {
+  /* 0 = I don't want to grow any larger, 1 = I wil shrink as needed
+  auto = please calculate my size for me
+  parameters = grow, shrink, basis*/
+  flex: 0 1 auto;
+}
+
+.main-content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+
+.logo-text {
+  background: white;
+  font-family: lakeshore;
+  font-size: 37px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.thumbnail-title {
+  background: rgb(96, 125, 139);
+  color: rgb(202, 238, 255);
+  display: block;
+  font-size: 18px;
+  margin: 0;
+  padding: 4px 10px;
+}
+
+.thumbnail-image {
+  display: block;
+  width: 100%;
+}
+
+.thumbnail-item {
+  border: 1px solid rgb(100%, 100%, 100%);
+  border: 1px solid rgba(100%, 100%, 100%, 0.8);
+  display: inline-block;
+  max-width: 120px;
+  min-width: 120px;
+  transition: transform 133ms ease-in-out;
+}
+
+.thumbnail-item:hover {
+  transform: scale(1.2);
+}
+
+.thumbnail-list {
+  display: flex;
+  flex: 0 1 auto;
+  justify-content: space-between;
+  list-style: none;
+  order: 2;
+  overflow-x: auto;
+  padding: 20px 0;
+  white-space: nowrap;
+}
+
+.detail-image-container {
+  align-items: center;
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: center;
+}
+
+.detail-image-frame {
+  position: relative;
+  text-align: center;
+  transition: transform 333ms cubic-bezier(.14, .55, .05, 1.24);
+}
+
+.is-tiny {
+  transform: scale(0.0001);
+  transition: transform 0ms;
+}
+
+.detail-image {
+  width: 90%;
+}
+
+.detail-image-title {
+  bottom: -16px;
+  color: white;
+  font-family: airstreamregular;
+  font-size: 40px;
+  left: 4px;
+  position: absolute;
+  text-shadow: rgba(0, 0, 0, 0.9) 1px 2px 15px;
+}
+
+/* hide the class="detail-image-container", when it is a descendent
+of "hidden-detail" */
+.hidden-detail .detail-image-container {
+  display: none;
+}
+
+.hidden-detail .thumbnail-item {
+  max-width: 80%;
+}
+
+.hidden-detail .thumbnail-list {
+  align-items: center;
+  flex-direction: column;
+}
+
+a[href="button"] {
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  padding: 15px 20px;
+  text-decoration: none;
+}
+
+a[href="button"]:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+@media all and (min-width:768px) {
+  .main-content {
+    flex-direction: row;
+    overflow: hidden;
+  }
+
+  .thumbnail-list {
+    flex-direction: column;
+    margin-left: 20px;
+    order: 0;
+    padding: 0 35px;
+  }
+
+  .thumbnail-item {
+    max-width: 260px;
+  }
+
+  .thumbnail-item+.thumbnail-item {
+    margin-top: 20px;
+  }
+}

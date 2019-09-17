@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--rel = relationship, what the attached source actually does
+   in this case, it styles the information.
+   it's important to have the normalize.css come before our css stylesheet-
+   href = the source of where its referencing from-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="stylesheets/styles.css">
+  <title>ottergram</title>
+  <!-- this creates the little icon in the browser tab -->
+  <link rel="shortcut icon" href="/favicon.ico?v1" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico?v1" type="image/x-icon">
+</head>
+
+<body>
+  <header class="main-header">
+    <h1 class="logo-text">Ottergram</h1>
+  </header>
+  <main class="main-content">
+    <ul class="thumbnail-list">
+      <!-- <li class="thumbnail-item">
+        <a href="#">
+          <img class="thumbnail-image" src="img/flexbox-froggy.PNG" alt="Flexbox-Froggy Final Level">
+          <span class="thumbnail-title">Flexbox Froggy</span>
+        </a>
+      </li>
+      <li class="thumbnail-item">
+        <a href="#">
+          <img class="thumbnail-image" src="img/grid-garden.PNG" alt="Grid Garden Final Level">
+          <span class="thumbnail-title">Grid Garden</span>
+        </a>
+      </li> -->
+      <li class="thumbnail-item">
+        <!-- <a> tag is an anchor tag, usually used to direct you to a different page
+      but if we don't want it to do anything, we give it a dummy value
+      such as "#" -->
+        <a href="img/otter1.jpg" data-image-role="trigger" data-image-title="Stayin' Alive" data-image-url=img/otter1.jpg> <img class="thumbnail-image" src="img/otter1.jpg" alt="Barry the Otter">
+          <span class="thumbnail-title">Barry</span>
+        </a>
+      </li>
+      <li class="thumbnail-item">
+        <a href="img/otter2.jpg" data-image-role="trigger" data-image-title="How Deep is Your Love" data-image-url=img/otter2.jpg> <img class="thumbnail-image" src="img/otter2.jpg" alt="Robin the Otter">
+          <span class="thumbnail-title">Robin</span>
+        </a>
+      </li>
+      <li class="thumbnail-item">
+        <a href="img/otter3.jpg" data-image-role="trigger" data-image-title="You Should Be Dancing" data-image-url=img/otter3.jpg> <img class="thumbnail-image" src="img/otter3.jpg" alt="Maurice the Otter">
+          <span class="thumbnail-title">Maurice</span>
+        </a>
+      </li>
+      <li class="thumbnail-item">
+        <a href="img/otter4.jpg" data-image-role="trigger" data-image-title="Night Fever" data-image-url=img/otter4.jpg> <img class="thumbnail-image" src="img/otter4.jpg" alt="Lesley the Otter">
+          <span class="thumbnail-title">Lesley</span>
+        </a>
+      </li>
+      <li class="thumbnail-item">
+        <a href="img/otter5.jpg" data-image-role="trigger" data-image-title="To Love Somebody" data-image-url=img/otter5.jpg> <img class="thumbnail-image" src="img/otter5.jpg" alt="Barbara the Otter">
+          <span class="thumbnail-title">Barbara</span>
+        </a>
+      </li>
+      <li class="thumbnail-item">
+    </ul>
+
+    <!-- <div> is a generic container for content -->
+    <div class="detail-image-container">
+      <!-- <button type="button" name="back-button" data-image-role ="previous-button"><</button> -->
+      <a href="button" class="previous-round" data-image-role="previous-button">&#8249;</a>
+      <div class="detail-image-frame" data-image-role="frame">
+        <img class="detail-image" data-image-role="target" src="img/otter1.jpg" alt="">
+        <span class="detail-image-title" data-image-role="title">Stayin' Alive</span>
+      </div>
+      <!-- <button type="button" name="next-button" data-image-role ="next-button">></button> -->
+      <a href="button" class="next-round" data-image-role="next-button">&#8250;</a>
+    </div>
+
+
+
+
+
+
+    </div>
+  </main>
+  <script src="scripts/main.js" charset="utf-8">
+  </script>
+</body>
+
+</html>
